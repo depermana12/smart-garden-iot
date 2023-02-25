@@ -151,6 +151,7 @@ WM_Config         WM_config;
 
 bool initialConfig = false;
 #define USE_AVAILABLE_PAGES         false
+#define USE_STATIC_IP_CONFIG_IN_CP  false
 #define USE_ESP_WIFIMANAGER_NTP     false
 #define USE_CLOUDFLARE_NTP          false
 #define USING_CORS_FEATURE          false
@@ -186,7 +187,7 @@ bool initialConfig = false;
 ////////////////////////////////////////////
 
 
-#define USE_CONFIGURABLE_DNS      true
+#define USE_CONFIGURABLE_DNS      false
 
 IPAddress dns1IP      = gatewayIP;
 IPAddress dns2IP      = IPAddress(8, 8, 8, 8);
