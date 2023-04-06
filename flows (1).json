@@ -1,0 +1,2863 @@
+[
+    {
+        "id": "ee2b64da3f103429",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "97c8bb9fa7aeefa4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "dippie-white",
+                "default": "#4B7930",
+                "baseColor": "#009933",
+                "baseFont": "Arial Narrow,Nimbus Sans L,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#009933",
+                    "value": "#009933",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#264369",
+                    "edited": true
+                },
+                "page-backgroundColor": {
+                    "value": "#f2f2f2",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "group-textColor": {
+                    "value": "#555555",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#dddddd",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#666666",
+                    "edited": true
+                },
+                "widget-backgroundColor": {
+                    "value": "#1f77b4",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "base-font": {
+                    "value": "Arial Narrow,Nimbus Sans L,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Dashboard Smart Garden | Deddia Permana",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 43,
+                "sy": 43,
+                "gx": 10,
+                "gy": 10,
+                "cx": 5,
+                "cy": 5,
+                "px": 5,
+                "py": 5
+            }
+        }
+    },
+    {
+        "id": "1a07bd9d6bca8797",
+        "type": "ui_group",
+        "name": "",
+        "tab": "b136614adda3bbd7",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e2553c755b99c0ca",
+        "type": "ui_group",
+        "name": "",
+        "tab": "b136614adda3bbd7",
+        "order": 3,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b136614adda3bbd7",
+        "type": "ui_tab",
+        "name": "SMART GARDEN",
+        "icon": "iconify-mdi:plant-outline",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b373aed8b131cd0e",
+        "type": "persist-store",
+        "filename": "persistence.json",
+        "interval": "60"
+    },
+    {
+        "id": "9b55febf3685104a",
+        "type": "mqtt-broker",
+        "name": "ubuntu cloud",
+        "broker": "159.223.57.199",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "0d235505808dedac",
+        "type": "ui_spacer",
+        "z": "ee2b64da3f103429",
+        "name": "spacer",
+        "group": "1a07bd9d6bca8797",
+        "order": 6,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "415879b7f617712a",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "ubuntu cloud",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://159.223.57.199:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "bcc41476e3dc42aa",
+        "type": "mqtt in",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/dht22/temperature",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9b55febf3685104a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "699937e8a4022891",
+                "e4c9d3fc486befd1",
+                "297ba2f6b968208f",
+                "f3cfa3f9c91012c5"
+            ]
+        ]
+    },
+    {
+        "id": "8fa01d4ffb0bc854",
+        "type": "mqtt in",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/dht22/humidity",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9b55febf3685104a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 460,
+        "y": 380,
+        "wires": [
+            [
+                "4967de58d2a7d3f8",
+                "8dcc4e5195752a6c",
+                "42bcd68c0a073e53",
+                "38ded3542abc153c"
+            ]
+        ]
+    },
+    {
+        "id": "6d11a7472bb79d13",
+        "type": "mqtt in",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/soil/soilHum",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "9b55febf3685104a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 670,
+        "y": 600,
+        "wires": [
+            [
+                "588b52e24f412006",
+                "16598842bfdfaf7a",
+                "e102bbf81559c081",
+                "c326375180ae75a7"
+            ]
+        ]
+    },
+    {
+        "id": "588b52e24f412006",
+        "type": "ui_chart",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "group": "1a07bd9d6bca8797",
+        "order": 7,
+        "width": 10,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#9467bd",
+            "#aec7e8",
+            "#e6e600",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 950,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "de26a8694ffd987a",
+        "type": "mqtt in",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/hcsr04/water",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9b55febf3685104a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1410,
+        "y": 140,
+        "wires": [
+            [
+                "fd5d42369d68dfd2",
+                "ac85626.9c36ba"
+            ]
+        ]
+    },
+    {
+        "id": "e4476bc708210e2a",
+        "type": "mqtt in",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/hcsr04/fertilizer",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9b55febf3685104a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1420,
+        "y": 640,
+        "wires": [
+            [
+                "e498cd4a768e0aee",
+                "e25bcaa4224b3d84"
+            ]
+        ]
+    },
+    {
+        "id": "bf4c4abb03567dc9",
+        "type": "ui_gauge",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "group": "e2553c755b99c0ca",
+        "order": 6,
+        "width": 3,
+        "height": 3,
+        "gtype": "wave",
+        "title": "Fertilizer",
+        "label": " liter",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "8",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1880,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "6c0943bfb2f7b13d",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/relay/ch1",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 1750,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "82eade1f296bfbdd",
+        "type": "ui_switch",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "label": "Water pump",
+        "tooltip": "",
+        "group": "e2553c755b99c0ca",
+        "order": 19,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1430,
+        "y": 1120,
+        "wires": [
+            [
+                "6c0943bfb2f7b13d",
+                "6ee160393a909c91",
+                "07af57152989ab69"
+            ]
+        ]
+    },
+    {
+        "id": "8cf836667bc1935a",
+        "type": "ui_slider",
+        "z": "ee2b64da3f103429",
+        "name": "Soil moisture set point",
+        "label": "",
+        "tooltip": "Soil moisture setpoint",
+        "group": "1a07bd9d6bca8797",
+        "order": 4,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "garden/soil/setPoint",
+        "topicType": "str",
+        "min": "10",
+        "max": "80",
+        "step": "5",
+        "className": "",
+        "x": 600,
+        "y": 820,
+        "wires": [
+            [
+                "37ea15a9b9ebecc9",
+                "6cb916a4c02d4bb5",
+                "f9c1e2beb696da9f",
+                "0a9484eca2c97879",
+                "799749272094e084"
+            ]
+        ]
+    },
+    {
+        "id": "37ea15a9b9ebecc9",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/soil/setPoint",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 990,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "6ee160393a909c91",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1720,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "6cb916a4c02d4bb5",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "1a07bd9d6bca8797",
+        "order": 5,
+        "width": 2,
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}} %",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "8b87f7d390af4736",
+        "type": "mqtt in",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/hcsr04/waterK",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9b55febf3685104a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1400,
+        "y": 260,
+        "wires": [
+            [
+                "9c35452c2d33cf14",
+                "347d0f22d78b1342"
+            ]
+        ]
+    },
+    {
+        "id": "59eb772792c01a36",
+        "type": "mqtt in",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/hcsr04/waterJ",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9b55febf3685104a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1400,
+        "y": 340,
+        "wires": [
+            [
+                "4e962c873ab74458",
+                "2cec20e419060e4f"
+            ]
+        ]
+    },
+    {
+        "id": "dfb436734353bd34",
+        "type": "mqtt in",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/hcsr04/fertilizerK",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9b55febf3685104a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1410,
+        "y": 720,
+        "wires": [
+            [
+                "3a3a577796679655",
+                "ebf5d44fb0603a47"
+            ]
+        ]
+    },
+    {
+        "id": "e79bee7efc7b74d9",
+        "type": "mqtt in",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/hcsr04/fertilizerJ",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9b55febf3685104a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1420,
+        "y": 800,
+        "wires": [
+            [
+                "baaf05f6cdbe0c89",
+                "c1c46326710fd43b"
+            ]
+        ]
+    },
+    {
+        "id": "9c35452c2d33cf14",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 4,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Water depth",
+        "format": "{{msg.payload}} cm",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1710,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4e962c873ab74458",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 5,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Water distance",
+        "format": "{{msg.payload}} cm",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1720,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3a3a577796679655",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 8,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Fert depth",
+        "format": "{{msg.payload}} cm",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1730,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "baaf05f6cdbe0c89",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 9,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Fert distance",
+        "format": "{{msg.payload}} cm",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1730,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "f9c1e2beb696da9f",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "4bd34de874ab8bc8",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "10e6a81692ade292",
+        "type": "ui_dropdown",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "label": "Menit",
+        "tooltip": "Masukan menit",
+        "place": "Select option",
+        "group": "e2553c755b99c0ca",
+        "order": 13,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "0",
+                "value": "0",
+                "type": "str"
+            },
+            {
+                "label": "1",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "2",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "3",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "4",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "5",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "6",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "7",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "8",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "9",
+                "value": "9",
+                "type": "str"
+            },
+            {
+                "label": "10",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "11",
+                "value": "11",
+                "type": "str"
+            },
+            {
+                "label": "12",
+                "value": "12",
+                "type": "str"
+            },
+            {
+                "label": "13",
+                "value": "13",
+                "type": "str"
+            },
+            {
+                "label": "14",
+                "value": "14",
+                "type": "str"
+            },
+            {
+                "label": "15",
+                "value": "15",
+                "type": "str"
+            },
+            {
+                "label": "16",
+                "value": "16",
+                "type": "str"
+            },
+            {
+                "label": "17",
+                "value": "17",
+                "type": "str"
+            },
+            {
+                "label": "18",
+                "value": "18",
+                "type": "str"
+            },
+            {
+                "label": "19",
+                "value": "19",
+                "type": "str"
+            },
+            {
+                "label": "20",
+                "value": "20",
+                "type": "str"
+            },
+            {
+                "label": "21",
+                "value": "21",
+                "type": "str"
+            },
+            {
+                "label": "22",
+                "value": "22",
+                "type": "str"
+            },
+            {
+                "label": "23",
+                "value": "23",
+                "type": "str"
+            },
+            {
+                "label": "24",
+                "value": "24",
+                "type": "str"
+            },
+            {
+                "label": "25",
+                "value": "25",
+                "type": "str"
+            },
+            {
+                "label": "26",
+                "value": "26",
+                "type": "str"
+            },
+            {
+                "label": "27",
+                "value": "27",
+                "type": "str"
+            },
+            {
+                "label": "28",
+                "value": "28",
+                "type": "str"
+            },
+            {
+                "label": "29",
+                "value": "29",
+                "type": "str"
+            },
+            {
+                "label": "30",
+                "value": "30",
+                "type": "str"
+            },
+            {
+                "label": "31",
+                "value": "31",
+                "type": "str"
+            },
+            {
+                "label": "32",
+                "value": "32",
+                "type": "str"
+            },
+            {
+                "label": "33",
+                "value": "33",
+                "type": "str"
+            },
+            {
+                "label": "34",
+                "value": "34",
+                "type": "str"
+            },
+            {
+                "label": "35",
+                "value": "35",
+                "type": "str"
+            },
+            {
+                "label": "36",
+                "value": "36",
+                "type": "str"
+            },
+            {
+                "label": "37",
+                "value": "37",
+                "type": "str"
+            },
+            {
+                "label": "38",
+                "value": "38",
+                "type": "str"
+            },
+            {
+                "label": "39",
+                "value": "39",
+                "type": "str"
+            },
+            {
+                "label": "40",
+                "value": "40",
+                "type": "str"
+            },
+            {
+                "label": "41",
+                "value": "41",
+                "type": "str"
+            },
+            {
+                "label": "42",
+                "value": "42",
+                "type": "str"
+            },
+            {
+                "label": "43",
+                "value": "43",
+                "type": "str"
+            },
+            {
+                "label": "44",
+                "value": "44",
+                "type": "str"
+            },
+            {
+                "label": "45",
+                "value": "45",
+                "type": "str"
+            },
+            {
+                "label": "46",
+                "value": "46",
+                "type": "str"
+            },
+            {
+                "label": "47",
+                "value": "47",
+                "type": "str"
+            },
+            {
+                "label": "48",
+                "value": "48",
+                "type": "str"
+            },
+            {
+                "label": "49",
+                "value": "49",
+                "type": "str"
+            },
+            {
+                "label": "50",
+                "value": "50",
+                "type": "str"
+            },
+            {
+                "label": "51",
+                "value": "51",
+                "type": "str"
+            },
+            {
+                "label": "52",
+                "value": "52",
+                "type": "str"
+            },
+            {
+                "label": "53",
+                "value": "53",
+                "type": "str"
+            },
+            {
+                "label": "54",
+                "value": "54",
+                "type": "str"
+            },
+            {
+                "label": "55",
+                "value": "55",
+                "type": "str"
+            },
+            {
+                "label": "56",
+                "value": "56",
+                "type": "str"
+            },
+            {
+                "label": "57",
+                "value": "57",
+                "type": "str"
+            },
+            {
+                "label": "58",
+                "value": "58",
+                "type": "str"
+            },
+            {
+                "label": "59",
+                "value": "59",
+                "type": "str"
+            },
+            {
+                "label": "60",
+                "value": "60",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 650,
+        "y": 1740,
+        "wires": [
+            [
+                "4bd34de874ab8bc8",
+                "9930dd63202b4fe0",
+                "1d7697b64bad83b3"
+            ]
+        ]
+    },
+    {
+        "id": "9930dd63202b4fe0",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/time/fertM",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 990,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "efb4808b8d66caae",
+        "type": "ui_dropdown",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "label": "Hari",
+        "tooltip": "Masukan hari",
+        "place": "Select option",
+        "group": "e2553c755b99c0ca",
+        "order": 11,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Senin",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "Selasa",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "Rabu",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "Kamis",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "Jum'at",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "Sabtu",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "Minggu",
+                "value": "0",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 650,
+        "y": 1420,
+        "wires": [
+            [
+                "cb4a1975cdbcf1eb",
+                "61cd189f81b50626",
+                "a8656810899a22f4"
+            ]
+        ]
+    },
+    {
+        "id": "116c9a7799956719",
+        "type": "ui_dropdown",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "label": "Jam",
+        "tooltip": "Masukan Jam",
+        "place": "Select option",
+        "group": "e2553c755b99c0ca",
+        "order": 12,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "6",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "7",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "8",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "9",
+                "value": "9",
+                "type": "str"
+            },
+            {
+                "label": "10",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "11",
+                "value": "11",
+                "type": "str"
+            },
+            {
+                "label": "12",
+                "value": "12",
+                "type": "str"
+            },
+            {
+                "label": "13",
+                "value": "13",
+                "type": "str"
+            },
+            {
+                "label": "14",
+                "value": "14",
+                "type": "str"
+            },
+            {
+                "label": "15",
+                "value": "15",
+                "type": "str"
+            },
+            {
+                "label": "16",
+                "value": "16",
+                "type": "str"
+            },
+            {
+                "label": "17",
+                "value": "17",
+                "type": "str"
+            },
+            {
+                "label": "18",
+                "value": "18",
+                "type": "str"
+            },
+            {
+                "label": "19",
+                "value": "19",
+                "type": "str"
+            },
+            {
+                "label": "20",
+                "value": "20",
+                "type": "str"
+            },
+            {
+                "label": "21",
+                "value": "21",
+                "type": "str"
+            },
+            {
+                "label": "22",
+                "value": "22",
+                "type": "str"
+            },
+            {
+                "label": "23",
+                "value": "23",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 650,
+        "y": 1580,
+        "wires": [
+            [
+                "dca454a409fe4ec9",
+                "ec692c7b4e3bf6f3",
+                "5fb7629bd41c5b78"
+            ]
+        ]
+    },
+    {
+        "id": "cb4a1975cdbcf1eb",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/time/fertD",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 990,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "dca454a409fe4ec9",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/time/fertH",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 990,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "61cd189f81b50626",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "ec692c7b4e3bf6f3",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "5902a0dffe7efaef",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "10ed88e264f334e2",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/time/duration",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 1000,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "88478dcc30749c57",
+        "type": "ui_slider",
+        "z": "ee2b64da3f103429",
+        "name": "set duration pump",
+        "label": "",
+        "tooltip": "",
+        "group": "e2553c755b99c0ca",
+        "order": 15,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "5000",
+        "max": "30000",
+        "step": "1000",
+        "className": "",
+        "x": 630,
+        "y": 1060,
+        "wires": [
+            [
+                "10ed88e264f334e2",
+                "5902a0dffe7efaef",
+                "f8d4c1f5af494b13",
+                "8e00d0b711ad69b3",
+                "86d4b073b360d296"
+            ]
+        ]
+    },
+    {
+        "id": "d5ceab4ef7e0bda4",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 16,
+        "width": 2,
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}} detik",
+        "layout": "row-right",
+        "className": "",
+        "x": 1150,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "f8d4c1f5af494b13",
+        "type": "change",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload / 1000",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 1060,
+        "wires": [
+            [
+                "d5ceab4ef7e0bda4"
+            ]
+        ]
+    },
+    {
+        "id": "0a9484eca2c97879",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "1a07bd9d6bca8797",
+        "order": 3,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Set moisture set point",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1000,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "fc587671cc9efed0",
+        "type": "ui_switch",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "label": "Fertilizer pump",
+        "tooltip": "",
+        "group": "e2553c755b99c0ca",
+        "order": 23,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1420,
+        "y": 1420,
+        "wires": [
+            [
+                "da8555f680854b68",
+                "7f0d2be5d0987d41",
+                "3439aeebb1a36cd2"
+            ]
+        ]
+    },
+    {
+        "id": "c1b39290ab1204f4",
+        "type": "ui_switch",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "label": "Selenoid valve",
+        "tooltip": "",
+        "group": "e2553c755b99c0ca",
+        "order": 21,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1420,
+        "y": 1720,
+        "wires": [
+            [
+                "6d9fc82f52019c60",
+                "29c69745e3e7cf21",
+                "04bf95f7b723cb3c"
+            ]
+        ]
+    },
+    {
+        "id": "5c7e29b87d149846",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 3,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Water Percentage",
+        "format": "{{msg.payload}} %",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1730,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "da8555f680854b68",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/relay/ch3",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 1750,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "6d9fc82f52019c60",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/relay/ch2",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 1750,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "7f0d2be5d0987d41",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1720,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "29c69745e3e7cf21",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1720,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "8e2fe1dfdf6c63d7",
+        "type": "mqtt in",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/hcsr04/waterP",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9b55febf3685104a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1400,
+        "y": 420,
+        "wires": [
+            [
+                "5c7e29b87d149846",
+                "238a3cc43eb41622"
+            ]
+        ]
+    },
+    {
+        "id": "2cb0cc8e7b0cb41e",
+        "type": "ui_template",
+        "z": "ee2b64da3f103429",
+        "group": "1a07bd9d6bca8797",
+        "name": "CSS",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    //.nr-dashboard-theme ui-card-panel {\n    //border-radius: 0.8em;\n    //}\n\n// REMEMBER YOU DISABLE TITLE TEXT\n\n    \n    body.nr-dashboard-theme md-toolbar {\n    background: linear-gradient( 135deg, rgb(0, 136, 232) 0%, rgb(0, 182, 198) 0%, rgb(0, 136, 232) 100% );\n    color: #fff;\n    }\n\n    .nr-dashboard-theme ui-card-panel {\n    border-radius: 0.5em;\n    }\n\n    body.nr-dashboard-theme md-content md-card {\n    background-color: #ffffff;\n    color: #666666;\n    border: 1px solid #ddd;\n    border-radius: 5px;\n    }\n    \n    </style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 330,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b5a1625e7e05ea09",
+        "type": "ui_template",
+        "z": "ee2b64da3f103429",
+        "group": "1a07bd9d6bca8797",
+        "name": "iconify",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "format": "<script src=\"https://code.iconify.design/1/1.0.7/iconify.min.js\"></script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 330,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "04bf95f7b723cb3c",
+        "type": "function",
+        "z": "ee2b64da3f103429",
+        "name": "function 1",
+        "func": "msg.color = (msg.payload === \"ON\") ? \"#3584e4\" : \"#949494\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1720,
+        "y": 1840,
+        "wires": [
+            [
+                "a591f724c7c57b97"
+            ]
+        ]
+    },
+    {
+        "id": "f68d3fd236a21e5d",
+        "type": "inject",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ON",
+        "payloadType": "str",
+        "x": 1450,
+        "y": 1760,
+        "wires": [
+            [
+                "04bf95f7b723cb3c"
+            ]
+        ]
+    },
+    {
+        "id": "1f1cd98c52b49a38",
+        "type": "inject",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "OFF",
+        "payloadType": "str",
+        "x": 1450,
+        "y": 1800,
+        "wires": [
+            [
+                "04bf95f7b723cb3c"
+            ]
+        ]
+    },
+    {
+        "id": "52aedd1d0ec09e7b",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 18,
+        "width": 2,
+        "height": 1,
+        "name": "water pump",
+        "label": "",
+        "format": "<font color={{msg.color}} ><i class=\"iconify icon:mdi:watering-can\" width=\"40\" height=\"40\"></i></font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1890,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "07af57152989ab69",
+        "type": "function",
+        "z": "ee2b64da3f103429",
+        "name": "function 2",
+        "func": "msg.color = (msg.payload === \"ON\") ? \"#3584e4\" : \"#949494\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1720,
+        "y": 1240,
+        "wires": [
+            [
+                "52aedd1d0ec09e7b"
+            ]
+        ]
+    },
+    {
+        "id": "7221a8dc80bec2a9",
+        "type": "inject",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ON",
+        "payloadType": "str",
+        "x": 1450,
+        "y": 1160,
+        "wires": [
+            [
+                "07af57152989ab69"
+            ]
+        ]
+    },
+    {
+        "id": "f103bc410ad64f76",
+        "type": "inject",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "OFF",
+        "payloadType": "str",
+        "x": 1450,
+        "y": 1200,
+        "wires": [
+            [
+                "07af57152989ab69"
+            ]
+        ]
+    },
+    {
+        "id": "da0f3dc9196731dc",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 22,
+        "width": 2,
+        "height": 1,
+        "name": "Fertilizer pump",
+        "label": "",
+        "format": "<font color={{msg.color}} ><i class=\"iconify icon:fa6-solid:pump-medical\" width=\"30\" height=\"30\"></i></font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1900,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "3439aeebb1a36cd2",
+        "type": "function",
+        "z": "ee2b64da3f103429",
+        "name": "function 3",
+        "func": "msg.color = (msg.payload === \"ON\") ? \"#3584e4\" : \"#949494\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1720,
+        "y": 1540,
+        "wires": [
+            [
+                "da0f3dc9196731dc"
+            ]
+        ]
+    },
+    {
+        "id": "29d4809944dee67c",
+        "type": "inject",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ON",
+        "payloadType": "str",
+        "x": 1450,
+        "y": 1460,
+        "wires": [
+            [
+                "3439aeebb1a36cd2"
+            ]
+        ]
+    },
+    {
+        "id": "45b317b641a8f76e",
+        "type": "inject",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "OFF",
+        "payloadType": "str",
+        "x": 1450,
+        "y": 1500,
+        "wires": [
+            [
+                "3439aeebb1a36cd2"
+            ]
+        ]
+    },
+    {
+        "id": "fd5d42369d68dfd2",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "347d0f22d78b1342",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "2cec20e419060e4f",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "238a3cc43eb41622",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1700,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e498cd4a768e0aee",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1720,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "ebf5d44fb0603a47",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1720,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "c1c46326710fd43b",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 33",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1720,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "16598842bfdfaf7a",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 34",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "699937e8a4022891",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 35",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "4967de58d2a7d3f8",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 36",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f10db114.4357f",
+        "type": "ui_gauge",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "group": "e2553c755b99c0ca",
+        "order": 2,
+        "width": 3,
+        "height": 3,
+        "gtype": "wave",
+        "title": "Water",
+        "label": " liter",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "8",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1870,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "ecfb236a.63727",
+        "type": "function",
+        "z": "ee2b64da3f103429",
+        "name": "Style Gauge",
+        "func": "msg.ui_control = \n\n{\n    \"gtype\": \"wave\",\n\n    \"options\":{\n        \"circleColor\": msg.circleColor, \n        \"textColor\": msg.textColor, \n        \"waveTextColor\": msg.waveTextColor, \n        \"waveColor\": msg.waveColor, \n        \"circleThickness\":0.03, \n        \"textVertPosition\":0.4, \n        \"waveHeight\":0.05, \n        \"waveCount\":2\n    \n}\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 40,
+        "wires": [
+            [
+                "f10db114.4357f"
+            ]
+        ]
+    },
+    {
+        "id": "ac85626.9c36ba",
+        "type": "change",
+        "z": "ee2b64da3f103429",
+        "name": "Gauge Colors",
+        "rules": [
+            {
+                "t": "set",
+                "p": "circleColor",
+                "pt": "msg",
+                "to": "#9A9996",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "textColor",
+                "pt": "msg",
+                "to": "#deddda",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "waveTextColor",
+                "pt": "msg",
+                "to": "#666666",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "waveColor",
+                "pt": "msg",
+                "to": "#AEE2FF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 40,
+        "wires": [
+            [
+                "ecfb236a.63727"
+            ]
+        ]
+    },
+    {
+        "id": "690f0e122b7ce351",
+        "type": "function",
+        "z": "ee2b64da3f103429",
+        "name": "Style Gauge",
+        "func": "msg.ui_control = \n\n{\n    \"gtype\": \"wave\",\n\n    \"options\":{\n        \"circleColor\": msg.circleColor, \n        \"textColor\": msg.textColor, \n        \"waveTextColor\": msg.waveTextColor, \n        \"waveColor\": msg.waveColor, \n        \"circleThickness\":0.03, \n        \"textVertPosition\":0.4, \n        \"waveHeight\":0.05, \n        \"waveCount\":2\n    \n}\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 540,
+        "wires": [
+            [
+                "bf4c4abb03567dc9"
+            ]
+        ]
+    },
+    {
+        "id": "e25bcaa4224b3d84",
+        "type": "change",
+        "z": "ee2b64da3f103429",
+        "name": "Gauge Colors",
+        "rules": [
+            {
+                "t": "set",
+                "p": "circleColor",
+                "pt": "msg",
+                "to": "#9A9996",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "textColor",
+                "pt": "msg",
+                "to": "#deddda",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "waveTextColor",
+                "pt": "msg",
+                "to": "#666666",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "waveColor",
+                "pt": "msg",
+                "to": "#a2eae0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 540,
+        "wires": [
+            [
+                "690f0e122b7ce351"
+            ]
+        ]
+    },
+    {
+        "id": "e102bbf81559c081",
+        "type": "ui_artlessgauge",
+        "z": "ee2b64da3f103429",
+        "group": "1a07bd9d6bca8797",
+        "order": 2,
+        "width": 3,
+        "height": 3,
+        "name": "",
+        "icon": "iconify-carbon:soil-moisture-field",
+        "label": "Soil moisture",
+        "unit": "%",
+        "layout": "radial",
+        "decimals": 0,
+        "differential": false,
+        "minmax": false,
+        "colorTrack": "#9a9996",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "secondary": "secondary",
+        "inline": false,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#9467bd",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#9467bd",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "5",
+        "bgcolorFromTheme": false,
+        "diffCenter": "",
+        "x": 980,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "e4c9d3fc486befd1",
+        "type": "ui_artlessgauge",
+        "z": "ee2b64da3f103429",
+        "group": "1a07bd9d6bca8797",
+        "order": 9,
+        "width": 5,
+        "height": 3,
+        "name": "",
+        "icon": "iconify-carbon:temperature-celsius",
+        "label": "Temperature",
+        "unit": "°C",
+        "layout": "radial",
+        "decimals": 0,
+        "differential": false,
+        "minmax": true,
+        "colorTrack": "#9a9996",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "secondary": "secondary",
+        "inline": false,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#e5a50a",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#e5a50a",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "5",
+        "bgcolorFromTheme": false,
+        "diffCenter": "",
+        "x": 980,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8dcc4e5195752a6c",
+        "type": "ui_artlessgauge",
+        "z": "ee2b64da3f103429",
+        "group": "1a07bd9d6bca8797",
+        "order": 10,
+        "width": 5,
+        "height": 3,
+        "name": "",
+        "icon": "iconify-material-symbols:humidity-percentage-outline-rounded",
+        "label": "Humidity",
+        "unit": "%",
+        "layout": "radial",
+        "decimals": 0,
+        "differential": false,
+        "minmax": true,
+        "colorTrack": "#9a9996",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "secondary": "secondary",
+        "inline": false,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#26a269",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#26a269",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": "5",
+        "bgcolorFromTheme": false,
+        "diffCenter": "",
+        "x": 980,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a8656810899a22f4",
+        "type": "persist in",
+        "z": "ee2b64da3f103429",
+        "name": "hari",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 950,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "1d7697b64bad83b3",
+        "type": "persist in",
+        "z": "ee2b64da3f103429",
+        "name": "menit",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 950,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "5fb7629bd41c5b78",
+        "type": "persist in",
+        "z": "ee2b64da3f103429",
+        "name": "jam",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 950,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "8e00d0b711ad69b3",
+        "type": "persist in",
+        "z": "ee2b64da3f103429",
+        "name": "durasi pump",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 970,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "799749272094e084",
+        "type": "persist in",
+        "z": "ee2b64da3f103429",
+        "name": "soil moisture",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 970,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "418a272e015cfe0e",
+        "type": "persist out",
+        "z": "ee2b64da3f103429",
+        "name": "hari",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 490,
+        "y": 1420,
+        "wires": [
+            [
+                "efb4808b8d66caae"
+            ]
+        ]
+    },
+    {
+        "id": "7b4f88614214b826",
+        "type": "persist out",
+        "z": "ee2b64da3f103429",
+        "name": "menit",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 490,
+        "y": 1740,
+        "wires": [
+            [
+                "10e6a81692ade292"
+            ]
+        ]
+    },
+    {
+        "id": "9473127d7dee9577",
+        "type": "persist out",
+        "z": "ee2b64da3f103429",
+        "name": "jam",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 490,
+        "y": 1580,
+        "wires": [
+            [
+                "116c9a7799956719"
+            ]
+        ]
+    },
+    {
+        "id": "04a2900faf136737",
+        "type": "persist out",
+        "z": "ee2b64da3f103429",
+        "name": "durasi pump",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 410,
+        "y": 1060,
+        "wires": [
+            [
+                "88478dcc30749c57"
+            ]
+        ]
+    },
+    {
+        "id": "fca293bd618cbb9e",
+        "type": "persist out",
+        "z": "ee2b64da3f103429",
+        "name": "soil moisture",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 370,
+        "y": 820,
+        "wires": [
+            [
+                "8cf836667bc1935a"
+            ]
+        ]
+    },
+    {
+        "id": "40d0aa53022eb5f1",
+        "type": "ui_chart",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "group": "1a07bd9d6bca8797",
+        "order": 11,
+        "width": 10,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#e5a50a",
+            "#26a269",
+            "#e26b03",
+            "#11e411",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 950,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d49e567507c60117",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "1a07bd9d6bca8797",
+        "order": 8,
+        "width": 10,
+        "height": 1,
+        "name": "weather",
+        "label": "",
+        "format": "<font size = 5>Weather</font>",
+        "layout": "row-left",
+        "className": "",
+        "x": 340,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "105ea2becb188071",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "1a07bd9d6bca8797",
+        "order": 1,
+        "width": 10,
+        "height": 1,
+        "name": "Soil data",
+        "label": "",
+        "format": "<font size = 5>Soil Data</font>",
+        "layout": "row-left",
+        "className": "",
+        "x": 340,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "b77bfe3f9fa80499",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 1,
+        "width": 10,
+        "height": 1,
+        "name": "tanks",
+        "label": "",
+        "format": "<font size = 5>Tanks</font>",
+        "layout": "row-left",
+        "className": "",
+        "x": 330,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "5c1283560ade20f0",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 10,
+        "width": 10,
+        "height": 1,
+        "name": "Fertilizing Schedule",
+        "label": "",
+        "format": "<font size = 5>Fertilizing Schedule</font>",
+        "layout": "row-left",
+        "className": "",
+        "x": 370,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "dd06dbefb1016f36",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 17,
+        "width": 10,
+        "height": 1,
+        "name": "Override Control",
+        "label": "",
+        "format": "<font size = 5>Override Control</font>",
+        "layout": "row-left",
+        "className": "",
+        "x": 360,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "a591f724c7c57b97",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 20,
+        "width": 2,
+        "height": 1,
+        "name": "Selenoid valve",
+        "label": "",
+        "format": "<font color={{msg.color}} ><i class=\"iconify icon:material-symbols:valve\" width=\"40\" height=\"40\"></i></font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1920,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "86d4b073b360d296",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 14,
+        "width": 10,
+        "height": 1,
+        "name": "",
+        "label": "Set Pump Duration",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 990,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "297ba2f6b968208f",
+        "type": "change",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Temperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 280,
+        "wires": [
+            [
+                "40d0aa53022eb5f1"
+            ]
+        ]
+    },
+    {
+        "id": "42bcd68c0a073e53",
+        "type": "change",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Humidity",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 320,
+        "wires": [
+            [
+                "40d0aa53022eb5f1"
+            ]
+        ]
+    },
+    {
+        "id": "11bd6eb3935e74b0",
+        "type": "comment",
+        "z": "ee2b64da3f103429",
+        "name": "Fertilizing schedule",
+        "info": "",
+        "x": 690,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "588db94a8737661a",
+        "type": "mqtt in",
+        "z": "ee2b64da3f103429",
+        "d": true,
+        "name": "",
+        "topic": "garden/hcsr04/fertilizerP",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9b55febf3685104a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1410,
+        "y": 880,
+        "wires": [
+            [
+                "fa7cac760c344eed",
+                "c6d1fcca10ea60a8"
+            ]
+        ]
+    },
+    {
+        "id": "c6d1fcca10ea60a8",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "d": true,
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1720,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "fa7cac760c344eed",
+        "type": "ui_text",
+        "z": "ee2b64da3f103429",
+        "group": "e2553c755b99c0ca",
+        "order": 7,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Fertilizer percentage",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1760,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "c326375180ae75a7",
+        "type": "influxdb out",
+        "z": "ee2b64da3f103429",
+        "d": true,
+        "influxdb": "415879b7f617712a",
+        "name": "Soil moisture logger",
+        "measurement": "soil moisture",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "depermana",
+        "bucket": "smart garden",
+        "x": 1000,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "f3cfa3f9c91012c5",
+        "type": "influxdb out",
+        "z": "ee2b64da3f103429",
+        "d": true,
+        "influxdb": "415879b7f617712a",
+        "name": "Temperature logger",
+        "measurement": "air temperature",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "depermana",
+        "bucket": "smart garden",
+        "x": 990,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "38ded3542abc153c",
+        "type": "influxdb out",
+        "z": "ee2b64da3f103429",
+        "d": true,
+        "influxdb": "415879b7f617712a",
+        "name": "Humidity logger",
+        "measurement": "air humidity",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "depermana",
+        "bucket": "smart garden",
+        "x": 980,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a4a447bded66fb14",
+        "type": "ui_template",
+        "z": "ee2b64da3f103429",
+        "d": true,
+        "group": "e2553c755b99c0ca",
+        "name": "",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "format": "<img src=\"http://192.168.1.9:81/view/\" width=\"auto\" height=\"auto\">",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1400,
+        "y": 1960,
+        "wires": [
+            []
+        ]
+    }
+]
