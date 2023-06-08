@@ -24,6 +24,7 @@ void onMqttConnect(bool sessionPresent)
   uint16_t packetIdSub10 = mqttClient.subscribe(MQTT_SUB_DAY3, 2);
   uint16_t packetIdSub11 = mqttClient.subscribe(MQTT_SUB_HTIME, 2); // schedule hour fertilizer
   uint16_t packetIdSub12 = mqttClient.subscribe(MQTT_SUB_DURA, 2); // duration fertilizer pump
+  uint16_t packetIdSub13 = mqttClient.subscribe(MQTT_SUB_MTIME, 2);
 }
 void onMqttDisconnect(AsyncMqttClientDisconnectReason reason)
 {
@@ -215,6 +216,20 @@ if (String(topic) == "garden/time/fertH")
     Serial.println(setHour);
     setJam = setHour.toInt();
     preferences.putInt("saveJam", setJam);
+  }
+
+  if (String(topic) == "garden/time/fertMin")
+  {
+    Serial.println(F("Received garden/time/fertMin"));
+    String setMin;
+    for (int i = 0; i < len; i++)
+    {
+      setMin += (char)payload[i];
+    }
+    Serial.print(F("Message: "));
+    Serial.println(setMin);
+    setMenit = setMin.toInt();
+    preferences.putInt("saveMenit", setMenit);
   }
 
   if (String(topic) == "garden/time/duration")
