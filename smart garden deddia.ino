@@ -85,9 +85,15 @@ for public with domain use "domain.com"
 #define MQTT_SUB_REL2 "garden/relay/ch2" // selenoid valve
 #define MQTT_SUB_REL3 "garden/relay/ch3" // fertilizer
 #define MQTT_SUB_TRES "garden/soil/setPoint"
-#define MQTT_SUB_DTIME "garden/time/fertD"
+#define MQTT_SUB_MONTH1 "garden/time/fertM1"
+#define MQTT_SUB_MONTH2 "garden/time/fertM2"
+#define MQTT_SUB_MONTH3 "garden/time/fertM3"
+
+#define MQTT_SUB_DAY1 "garden/time/fertD1"
+#define MQTT_SUB_DAY2 "garden/time/fertD2"
+#define MQTT_SUB_DAY3 "garden/time/fertD3"
 #define MQTT_SUB_HTIME "garden/time/fertH"
-#define MQTT_SUB_MTIME "garden/time/fertM"
+#define MQTT_SUB_MTIME "garden/time/fertMin"
 #define MQTT_SUB_DURA "garden/time/duration"
 
 
@@ -224,6 +230,8 @@ unsigned long previousMillisFert = 0;
 unsigned long previousMillisCheckFert = 0;
 unsigned long previousPing0 = 0;
 unsigned long previousPing1 = 0;
+bool isFertPumpOn = false;
+unsigned long fertOnTiming;
 
 const int LCD_COLS = 20;
 const int LCD_ROWS = 4;
@@ -248,7 +256,7 @@ const int AirValue = 3409;
 const int WaterValue = 1666;
 
 int tanggal, bulan, tahun, jam, menit, detik, suhu, t, h;
-int setHari, setJam, setMenit;
+int jadwalBulan1, jadwalBulan2, jadwalBulan3, jadwalTanggal1, jadwalTanggal2, jadwalTanggal3, setJam, setMenit;
 int soilMoistRaw, soilMoistPercen, soilMoistSetpoint;
 int waterTank;
 int gapSensor = 5;
@@ -299,6 +307,7 @@ boolean enableChange = true;
 boolean backlight = HIGH;
 boolean overrideCh1 = false;
 boolean overrideCh2 = false;
+boolean overrideCh3 = false;
 boolean fertilizerPumpOn = false;
 boolean selenoidOn;
 boolean waterPumpOn;
@@ -453,26 +462,45 @@ void loop()
     previousMillis2 = currentMillis2;
   }
 
-  // Polling schedule every 1sec
   if (millis() - previousMillisCheckFert >= intervalPolling)
   {
     checkTime();
-    if (hari == daysOfTheWeek[setHari] && jam == setJam && menit == setMenit && detik == 0 && fertilizerPumpOn == false)
-    {
-      Serial.println(F("Memompa pupuk cair"));
+   
+    // First schedule
+if (bulan == jadwalBulan1 && tanggal == jadwalTanggal1 && jam == setJam && menit == setMenit && detik == 0 && fertilizerPumpOn == false)
+  {
+    fertilizerPumpOn = true;
       previousMillisFert = millis();
-      fertilizerPumpOn = true;
       digitalWrite(fertilizerPump, LOW); // pompa on
+      Serial.println(F("Memompa pupuk cair"));
+      waterFertilizerStatus = "ON";
+}
+ 
+// Second schedule
+else if (bulan == jadwalBulan2 && tanggal == jadwalTanggal2 && jam == setJam && menit == setMenit && detik == 0 && fertilizerPumpOn == false)
+    {
+    fertilizerPumpOn = true;
+      previousMillisFert = millis();
+      digitalWrite(fertilizerPump, LOW); // pompa on
+      Serial.println(F("Memompa pupuk cair"));
       waterFertilizerStatus = "ON";
     }
-    else if (fertilizerPumpOn == true && (millis() - previousMillisFert > intervalFertilizer))
+
+// Third schedule
+else if (bulan == jadwalBulan3 && tanggal == jadwalTanggal3 && jam == setJam && menit == setMenit && detik == 0 && fertilizerPumpOn == false)
     {
-      fertilizerPumpOn = false;
-      Serial.println(F("sudah dipupuk"));
-      digitalWrite(fertilizerPump, HIGH); // pompa off
-      waterFertilizerStatus = "OFF";
+    fertilizerPumpOn = true;
+      previousMillisFert = millis();
+      digitalWrite(fertilizerPump, LOW); // pompa on
+      Serial.println(F("Memompa pupuk cair"));
+      waterFertilizerStatus = "ON";
     }
-    previousMillisCheckFert = millis();
+	
+	 // Turn off the relay after 5 seconds
+  if (fertilizerPumpOn == true && (millis() - previousMillisFert) >= intervalFertilizer) {
+    fertilizerPumpOn = false;
+    digitalWrite(fertilizerPump, HIGH); // Turn off relay
+  }
   }
 
 /*
@@ -504,6 +532,17 @@ void loop()
       //selenoidStatus = "OFF";
   }
 
+  // override fertilizer Pump
+  //if (fertilizerPumpOn == true || overrideCh3 == true)
+ // {
+  //  digitalWrite(fertilizerPump, LOW);
+
+ // }
+ // else
+ // {
+  //  digitalWrite(fertilizerPump, HIGH);
+ // }
+
   // Soil moisture trigger water pump
   if (soilMoistPercen <= soilMoistSetpoint)
   {
@@ -518,10 +557,21 @@ void loop()
 
   // Read preferences value. if key failed to retrieve value, then set to 0
   soilMoistSetpoint = preferences.getInt("triggerLv", 0);
-  setHari = preferences.getInt("saveHari", 0);
+
   setJam = preferences.getInt("saveJam", 0);
   setMenit = preferences.getInt("saveMenit", 0);
   intervalFertilizer = preferences.getInt("saveDura", 0);
+
+  jadwalBulan1 = preferences.getInt("saveMonth1", 0);
+  jadwalBulan2 = preferences.getInt("saveMonth2", 0);
+  jadwalBulan3 = preferences.getInt("saveMonth3", 0);
+
+
+  jadwalTanggal1 = preferences.getInt("saveDay1", 0);
+  jadwalTanggal2 = preferences.getInt("saveDay2", 0);
+  jadwalTanggal3 = preferences.getInt("saveDay3", 0);
+
+
 
   /*
   // Serial console preferences
@@ -531,7 +581,10 @@ void loop()
   Serial.printf("latest set menit value saved: %d \n", setMenit);
   Serial.printf("latest interval fertilizer value saved: %d \n", intervalFertilizer);
   */
- 
+
+
 loopWifiManager();
 
 }
+
+  
