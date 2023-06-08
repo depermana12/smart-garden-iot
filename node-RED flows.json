@@ -169,16 +169,6 @@
         "sessionExpiry": ""
     },
     {
-        "id": "0d235505808dedac",
-        "type": "ui_spacer",
-        "z": "ee2b64da3f103429",
-        "name": "spacer",
-        "group": "1a07bd9d6bca8797",
-        "order": 6,
-        "width": 7,
-        "height": 1
-    },
-    {
         "id": "415879b7f617712a",
         "type": "influxdb",
         "hostname": "127.0.0.1",
@@ -191,6 +181,16 @@
         "influxdbVersion": "2.0",
         "url": "http://159.223.57.199:8086",
         "rejectUnauthorized": true
+    },
+    {
+        "id": "3d2c7ddca6b3349d",
+        "type": "ui_spacer",
+        "z": "ee2b64da3f103429",
+        "name": "spacer",
+        "group": "1a07bd9d6bca8797",
+        "order": 6,
+        "width": 7,
+        "height": 1
     },
     {
         "id": "bcc41476e3dc42aa",
@@ -405,7 +405,7 @@
         "label": "Water pump",
         "tooltip": "",
         "group": "e2553c755b99c0ca",
-        "order": 19,
+        "order": 24,
         "width": 8,
         "height": 1,
         "passthru": true,
@@ -688,440 +688,6 @@
         "wires": []
     },
     {
-        "id": "4bd34de874ab8bc8",
-        "type": "debug",
-        "z": "ee2b64da3f103429",
-        "name": "debug 18",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 960,
-        "y": 1800,
-        "wires": []
-    },
-    {
-        "id": "10e6a81692ade292",
-        "type": "ui_dropdown",
-        "z": "ee2b64da3f103429",
-        "name": "",
-        "label": "Menit",
-        "tooltip": "Masukan menit",
-        "place": "Select option",
-        "group": "e2553c755b99c0ca",
-        "order": 13,
-        "width": 3,
-        "height": 1,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "0",
-                "value": "0",
-                "type": "str"
-            },
-            {
-                "label": "1",
-                "value": "1",
-                "type": "str"
-            },
-            {
-                "label": "2",
-                "value": "2",
-                "type": "str"
-            },
-            {
-                "label": "3",
-                "value": "3",
-                "type": "str"
-            },
-            {
-                "label": "4",
-                "value": "4",
-                "type": "str"
-            },
-            {
-                "label": "5",
-                "value": "5",
-                "type": "str"
-            },
-            {
-                "label": "6",
-                "value": "6",
-                "type": "str"
-            },
-            {
-                "label": "7",
-                "value": "7",
-                "type": "str"
-            },
-            {
-                "label": "8",
-                "value": "8",
-                "type": "str"
-            },
-            {
-                "label": "9",
-                "value": "9",
-                "type": "str"
-            },
-            {
-                "label": "10",
-                "value": "10",
-                "type": "str"
-            },
-            {
-                "label": "11",
-                "value": "11",
-                "type": "str"
-            },
-            {
-                "label": "12",
-                "value": "12",
-                "type": "str"
-            },
-            {
-                "label": "13",
-                "value": "13",
-                "type": "str"
-            },
-            {
-                "label": "14",
-                "value": "14",
-                "type": "str"
-            },
-            {
-                "label": "15",
-                "value": "15",
-                "type": "str"
-            },
-            {
-                "label": "16",
-                "value": "16",
-                "type": "str"
-            },
-            {
-                "label": "17",
-                "value": "17",
-                "type": "str"
-            },
-            {
-                "label": "18",
-                "value": "18",
-                "type": "str"
-            },
-            {
-                "label": "19",
-                "value": "19",
-                "type": "str"
-            },
-            {
-                "label": "20",
-                "value": "20",
-                "type": "str"
-            },
-            {
-                "label": "21",
-                "value": "21",
-                "type": "str"
-            },
-            {
-                "label": "22",
-                "value": "22",
-                "type": "str"
-            },
-            {
-                "label": "23",
-                "value": "23",
-                "type": "str"
-            },
-            {
-                "label": "24",
-                "value": "24",
-                "type": "str"
-            },
-            {
-                "label": "25",
-                "value": "25",
-                "type": "str"
-            },
-            {
-                "label": "26",
-                "value": "26",
-                "type": "str"
-            },
-            {
-                "label": "27",
-                "value": "27",
-                "type": "str"
-            },
-            {
-                "label": "28",
-                "value": "28",
-                "type": "str"
-            },
-            {
-                "label": "29",
-                "value": "29",
-                "type": "str"
-            },
-            {
-                "label": "30",
-                "value": "30",
-                "type": "str"
-            },
-            {
-                "label": "31",
-                "value": "31",
-                "type": "str"
-            },
-            {
-                "label": "32",
-                "value": "32",
-                "type": "str"
-            },
-            {
-                "label": "33",
-                "value": "33",
-                "type": "str"
-            },
-            {
-                "label": "34",
-                "value": "34",
-                "type": "str"
-            },
-            {
-                "label": "35",
-                "value": "35",
-                "type": "str"
-            },
-            {
-                "label": "36",
-                "value": "36",
-                "type": "str"
-            },
-            {
-                "label": "37",
-                "value": "37",
-                "type": "str"
-            },
-            {
-                "label": "38",
-                "value": "38",
-                "type": "str"
-            },
-            {
-                "label": "39",
-                "value": "39",
-                "type": "str"
-            },
-            {
-                "label": "40",
-                "value": "40",
-                "type": "str"
-            },
-            {
-                "label": "41",
-                "value": "41",
-                "type": "str"
-            },
-            {
-                "label": "42",
-                "value": "42",
-                "type": "str"
-            },
-            {
-                "label": "43",
-                "value": "43",
-                "type": "str"
-            },
-            {
-                "label": "44",
-                "value": "44",
-                "type": "str"
-            },
-            {
-                "label": "45",
-                "value": "45",
-                "type": "str"
-            },
-            {
-                "label": "46",
-                "value": "46",
-                "type": "str"
-            },
-            {
-                "label": "47",
-                "value": "47",
-                "type": "str"
-            },
-            {
-                "label": "48",
-                "value": "48",
-                "type": "str"
-            },
-            {
-                "label": "49",
-                "value": "49",
-                "type": "str"
-            },
-            {
-                "label": "50",
-                "value": "50",
-                "type": "str"
-            },
-            {
-                "label": "51",
-                "value": "51",
-                "type": "str"
-            },
-            {
-                "label": "52",
-                "value": "52",
-                "type": "str"
-            },
-            {
-                "label": "53",
-                "value": "53",
-                "type": "str"
-            },
-            {
-                "label": "54",
-                "value": "54",
-                "type": "str"
-            },
-            {
-                "label": "55",
-                "value": "55",
-                "type": "str"
-            },
-            {
-                "label": "56",
-                "value": "56",
-                "type": "str"
-            },
-            {
-                "label": "57",
-                "value": "57",
-                "type": "str"
-            },
-            {
-                "label": "58",
-                "value": "58",
-                "type": "str"
-            },
-            {
-                "label": "59",
-                "value": "59",
-                "type": "str"
-            },
-            {
-                "label": "60",
-                "value": "60",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 650,
-        "y": 1740,
-        "wires": [
-            [
-                "4bd34de874ab8bc8",
-                "9930dd63202b4fe0",
-                "1d7697b64bad83b3"
-            ]
-        ]
-    },
-    {
-        "id": "9930dd63202b4fe0",
-        "type": "mqtt out",
-        "z": "ee2b64da3f103429",
-        "name": "",
-        "topic": "garden/time/fertM",
-        "qos": "2",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "9b55febf3685104a",
-        "x": 990,
-        "y": 1740,
-        "wires": []
-    },
-    {
-        "id": "efb4808b8d66caae",
-        "type": "ui_dropdown",
-        "z": "ee2b64da3f103429",
-        "name": "",
-        "label": "Hari",
-        "tooltip": "Masukan hari",
-        "place": "Select option",
-        "group": "e2553c755b99c0ca",
-        "order": 11,
-        "width": 4,
-        "height": 1,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "Senin",
-                "value": "1",
-                "type": "str"
-            },
-            {
-                "label": "Selasa",
-                "value": "2",
-                "type": "str"
-            },
-            {
-                "label": "Rabu",
-                "value": "3",
-                "type": "str"
-            },
-            {
-                "label": "Kamis",
-                "value": "4",
-                "type": "str"
-            },
-            {
-                "label": "Jum'at",
-                "value": "5",
-                "type": "str"
-            },
-            {
-                "label": "Sabtu",
-                "value": "6",
-                "type": "str"
-            },
-            {
-                "label": "Minggu",
-                "value": "0",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 650,
-        "y": 1420,
-        "wires": [
-            [
-                "cb4a1975cdbcf1eb",
-                "61cd189f81b50626",
-                "a8656810899a22f4"
-            ]
-        ]
-    },
-    {
         "id": "116c9a7799956719",
         "type": "ui_dropdown",
         "z": "ee2b64da3f103429",
@@ -1130,8 +696,8 @@
         "tooltip": "Masukan Jam",
         "place": "Select option",
         "group": "e2553c755b99c0ca",
-        "order": 12,
-        "width": 3,
+        "order": 13,
+        "width": 4,
         "height": 1,
         "passthru": true,
         "multiple": false,
@@ -1231,8 +797,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 650,
-        "y": 1580,
+        "x": 330,
+        "y": 1340,
         "wires": [
             [
                 "dca454a409fe4ec9",
@@ -1242,11 +808,11 @@
         ]
     },
     {
-        "id": "cb4a1975cdbcf1eb",
+        "id": "dca454a409fe4ec9",
         "type": "mqtt out",
         "z": "ee2b64da3f103429",
         "name": "",
-        "topic": "garden/time/fertD",
+        "topic": "garden/time/fertH",
         "qos": "2",
         "retain": "",
         "respTopic": "",
@@ -1255,42 +821,8 @@
         "correl": "",
         "expiry": "",
         "broker": "9b55febf3685104a",
-        "x": 990,
-        "y": 1420,
-        "wires": []
-    },
-    {
-        "id": "dca454a409fe4ec9",
-        "type": "mqtt out",
-        "z": "ee2b64da3f103429",
-        "name": "",
-        "topic": "garden/time/fertH",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "9b55febf3685104a",
-        "x": 990,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "61cd189f81b50626",
-        "type": "debug",
-        "z": "ee2b64da3f103429",
-        "name": "debug 19",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 960,
-        "y": 1480,
+        "x": 670,
+        "y": 1340,
         "wires": []
     },
     {
@@ -1305,8 +837,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 960,
-        "y": 1640,
+        "x": 640,
+        "y": 1400,
         "wires": []
     },
     {
@@ -1351,7 +883,7 @@
         "label": "",
         "tooltip": "",
         "group": "e2553c755b99c0ca",
-        "order": 15,
+        "order": 21,
         "width": 8,
         "height": 1,
         "passthru": true,
@@ -1379,7 +911,7 @@
         "type": "ui_text",
         "z": "ee2b64da3f103429",
         "group": "e2553c755b99c0ca",
-        "order": 16,
+        "order": 22,
         "width": 2,
         "height": 1,
         "name": "",
@@ -1443,7 +975,7 @@
         "label": "Fertilizer pump",
         "tooltip": "",
         "group": "e2553c755b99c0ca",
-        "order": 23,
+        "order": 28,
         "width": 8,
         "height": 1,
         "passthru": true,
@@ -1479,7 +1011,7 @@
         "label": "Selenoid valve",
         "tooltip": "",
         "group": "e2553c755b99c0ca",
-        "order": 21,
+        "order": 26,
         "width": 8,
         "height": 1,
         "passthru": true,
@@ -1738,7 +1270,7 @@
         "type": "ui_text",
         "z": "ee2b64da3f103429",
         "group": "e2553c755b99c0ca",
-        "order": 18,
+        "order": 25,
         "width": 2,
         "height": 1,
         "name": "water pump",
@@ -1832,7 +1364,7 @@
         "type": "ui_text",
         "z": "ee2b64da3f103429",
         "group": "e2553c755b99c0ca",
-        "order": 22,
+        "order": 29,
         "width": 2,
         "height": 1,
         "name": "Fertilizer pump",
@@ -2377,33 +1909,13 @@
         "wires": []
     },
     {
-        "id": "a8656810899a22f4",
-        "type": "persist in",
-        "z": "ee2b64da3f103429",
-        "name": "hari",
-        "storageNode": "b373aed8b131cd0e",
-        "x": 950,
-        "y": 1520,
-        "wires": []
-    },
-    {
-        "id": "1d7697b64bad83b3",
-        "type": "persist in",
-        "z": "ee2b64da3f103429",
-        "name": "menit",
-        "storageNode": "b373aed8b131cd0e",
-        "x": 950,
-        "y": 1840,
-        "wires": []
-    },
-    {
         "id": "5fb7629bd41c5b78",
         "type": "persist in",
         "z": "ee2b64da3f103429",
         "name": "jam",
         "storageNode": "b373aed8b131cd0e",
-        "x": 950,
-        "y": 1680,
+        "x": 630,
+        "y": 1440,
         "wires": []
     },
     {
@@ -2427,41 +1939,13 @@
         "wires": []
     },
     {
-        "id": "418a272e015cfe0e",
-        "type": "persist out",
-        "z": "ee2b64da3f103429",
-        "name": "hari",
-        "storageNode": "b373aed8b131cd0e",
-        "x": 490,
-        "y": 1420,
-        "wires": [
-            [
-                "efb4808b8d66caae"
-            ]
-        ]
-    },
-    {
-        "id": "7b4f88614214b826",
-        "type": "persist out",
-        "z": "ee2b64da3f103429",
-        "name": "menit",
-        "storageNode": "b373aed8b131cd0e",
-        "x": 490,
-        "y": 1740,
-        "wires": [
-            [
-                "10e6a81692ade292"
-            ]
-        ]
-    },
-    {
         "id": "9473127d7dee9577",
         "type": "persist out",
         "z": "ee2b64da3f103429",
         "name": "jam",
         "storageNode": "b373aed8b131cd0e",
-        "x": 490,
-        "y": 1580,
+        "x": 170,
+        "y": 1340,
         "wires": [
             [
                 "116c9a7799956719"
@@ -2613,7 +2097,7 @@
         "type": "ui_text",
         "z": "ee2b64da3f103429",
         "group": "e2553c755b99c0ca",
-        "order": 17,
+        "order": 23,
         "width": 10,
         "height": 1,
         "name": "Override Control",
@@ -2630,7 +2114,7 @@
         "type": "ui_text",
         "z": "ee2b64da3f103429",
         "group": "e2553c755b99c0ca",
-        "order": 20,
+        "order": 27,
         "width": 2,
         "height": 1,
         "name": "Selenoid valve",
@@ -2647,7 +2131,7 @@
         "type": "ui_text",
         "z": "ee2b64da3f103429",
         "group": "e2553c755b99c0ca",
-        "order": 14,
+        "order": 20,
         "width": 10,
         "height": 1,
         "name": "",
@@ -2719,8 +2203,8 @@
         "z": "ee2b64da3f103429",
         "name": "Fertilizing schedule",
         "info": "",
-        "x": 690,
-        "y": 1360,
+        "x": 490,
+        "y": 1260,
         "wires": []
     },
     {
@@ -2845,7 +2329,7 @@
         "d": true,
         "group": "e2553c755b99c0ca",
         "name": "",
-        "order": 13,
+        "order": 19,
         "width": 0,
         "height": 0,
         "format": "<img src=\"http://192.168.1.9:81/view/\" width=\"auto\" height=\"auto\">",
@@ -2858,6 +2342,1567 @@
         "y": 1960,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "a62537a266e9e24d",
+        "type": "ui_dropdown",
+        "z": "ee2b64da3f103429",
+        "name": "jadwal bulan pertama",
+        "label": "Bulan",
+        "tooltip": "Masukan Bulan",
+        "place": "Select option",
+        "group": "e2553c755b99c0ca",
+        "order": 11,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Januari",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "Februari",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "Maret",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "April",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "Mei",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "Juni",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "Juli",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "Agustus",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "September",
+                "value": "9",
+                "type": "str"
+            },
+            {
+                "label": "Oktober",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "November",
+                "value": "11",
+                "type": "str"
+            },
+            {
+                "label": "Desember",
+                "value": "12",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 520,
+        "y": 1820,
+        "wires": [
+            [
+                "7ff0fcbf335165ca",
+                "8c5d3603ae18bdbc",
+                "f48cdf37c2cef081"
+            ]
+        ]
+    },
+    {
+        "id": "7ff0fcbf335165ca",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/time/fertM1",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 810,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "8c5d3603ae18bdbc",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 39",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "399c89978f8f3156",
+        "type": "ui_dropdown",
+        "z": "ee2b64da3f103429",
+        "name": "jadwal tanggal pertama",
+        "label": "Tanggal",
+        "tooltip": "Masukan Tanggal",
+        "place": "Select option",
+        "group": "e2553c755b99c0ca",
+        "order": 12,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "1",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "2",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "3",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "4",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "5",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "6",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "7",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "8",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "9",
+                "value": "9",
+                "type": "str"
+            },
+            {
+                "label": "10",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "11",
+                "value": "11",
+                "type": "str"
+            },
+            {
+                "label": "12",
+                "value": "12",
+                "type": "str"
+            },
+            {
+                "label": "13",
+                "value": "13",
+                "type": "str"
+            },
+            {
+                "label": "14",
+                "value": "14",
+                "type": "str"
+            },
+            {
+                "label": "15",
+                "value": "15",
+                "type": "str"
+            },
+            {
+                "label": "16",
+                "value": "16",
+                "type": "str"
+            },
+            {
+                "label": "17",
+                "value": "17",
+                "type": "str"
+            },
+            {
+                "label": "18",
+                "value": "18",
+                "type": "str"
+            },
+            {
+                "label": "19",
+                "value": "19",
+                "type": "str"
+            },
+            {
+                "label": "20",
+                "value": "20",
+                "type": "str"
+            },
+            {
+                "label": "21",
+                "value": "21",
+                "type": "str"
+            },
+            {
+                "label": "22",
+                "value": "22",
+                "type": "str"
+            },
+            {
+                "label": "23",
+                "value": "23",
+                "type": "str"
+            },
+            {
+                "label": "24",
+                "value": "24",
+                "type": "str"
+            },
+            {
+                "label": "25",
+                "value": "25",
+                "type": "str"
+            },
+            {
+                "label": "26",
+                "value": "26",
+                "type": "str"
+            },
+            {
+                "label": "27",
+                "value": "27",
+                "type": "str"
+            },
+            {
+                "label": "28",
+                "value": "28",
+                "type": "str"
+            },
+            {
+                "label": "29",
+                "value": "29",
+                "type": "str"
+            },
+            {
+                "label": "30",
+                "value": "30",
+                "type": "str"
+            },
+            {
+                "label": " 31",
+                "value": "31",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 530,
+        "y": 2000,
+        "wires": [
+            [
+                "4f34df6c38036c2f",
+                "bfb0a375e4aecced",
+                "a64d9fbce2cbed97"
+            ]
+        ]
+    },
+    {
+        "id": "4f34df6c38036c2f",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/time/fertD1",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 790,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "bfb0a375e4aecced",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "3476a2a780574022",
+        "type": "persist out",
+        "z": "ee2b64da3f103429",
+        "name": "Bulan1",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 320,
+        "y": 1820,
+        "wires": [
+            [
+                "a62537a266e9e24d"
+            ]
+        ]
+    },
+    {
+        "id": "f48cdf37c2cef081",
+        "type": "persist in",
+        "z": "ee2b64da3f103429",
+        "name": "Bulan1",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 780,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "10917daf78f7bd73",
+        "type": "persist out",
+        "z": "ee2b64da3f103429",
+        "name": "Tanggal1",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 320,
+        "y": 2000,
+        "wires": [
+            [
+                "399c89978f8f3156"
+            ]
+        ]
+    },
+    {
+        "id": "a64d9fbce2cbed97",
+        "type": "persist in",
+        "z": "ee2b64da3f103429",
+        "name": "Tanggal1",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 760,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "86b440d0a305db2a",
+        "type": "ui_dropdown",
+        "z": "ee2b64da3f103429",
+        "name": "jadwal bulan kedua",
+        "label": "Bulan",
+        "tooltip": "Masukan Bulan",
+        "place": "Select option",
+        "group": "e2553c755b99c0ca",
+        "order": 14,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Januari",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "Februari",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "Maret",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "April",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "Mei",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "Juni",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "Juli",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "Agustus",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "September",
+                "value": "9",
+                "type": "str"
+            },
+            {
+                "label": "Oktober",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "November",
+                "value": "11",
+                "type": "str"
+            },
+            {
+                "label": "Desember",
+                "value": "12",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 650,
+        "y": 2260,
+        "wires": [
+            [
+                "397d86763440f575",
+                "704f9e5a384368ae",
+                "67cb9e0e4c92c587"
+            ]
+        ]
+    },
+    {
+        "id": "397d86763440f575",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/time/fertM2",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 950,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "704f9e5a384368ae",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 41",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "81d53570f2e8aef7",
+        "type": "ui_dropdown",
+        "z": "ee2b64da3f103429",
+        "name": "jadwal tanggal kedua",
+        "label": "Tanggal",
+        "tooltip": "Masukan Tanggal",
+        "place": "Select option",
+        "group": "e2553c755b99c0ca",
+        "order": 15,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "1",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "2",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "3",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "4",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "5",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "6",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "7",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "8",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "9",
+                "value": "9",
+                "type": "str"
+            },
+            {
+                "label": "10",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "11",
+                "value": "11",
+                "type": "str"
+            },
+            {
+                "label": "12",
+                "value": "12",
+                "type": "str"
+            },
+            {
+                "label": "13",
+                "value": "13",
+                "type": "str"
+            },
+            {
+                "label": "14",
+                "value": "14",
+                "type": "str"
+            },
+            {
+                "label": "15",
+                "value": "15",
+                "type": "str"
+            },
+            {
+                "label": "16",
+                "value": "16",
+                "type": "str"
+            },
+            {
+                "label": "17",
+                "value": "17",
+                "type": "str"
+            },
+            {
+                "label": "18",
+                "value": "18",
+                "type": "str"
+            },
+            {
+                "label": "19",
+                "value": "19",
+                "type": "str"
+            },
+            {
+                "label": "20",
+                "value": "20",
+                "type": "str"
+            },
+            {
+                "label": "21",
+                "value": "21",
+                "type": "str"
+            },
+            {
+                "label": "22",
+                "value": "22",
+                "type": "str"
+            },
+            {
+                "label": "23",
+                "value": "23",
+                "type": "str"
+            },
+            {
+                "label": "24",
+                "value": "24",
+                "type": "str"
+            },
+            {
+                "label": "25",
+                "value": "25",
+                "type": "str"
+            },
+            {
+                "label": "26",
+                "value": "26",
+                "type": "str"
+            },
+            {
+                "label": "27",
+                "value": "27",
+                "type": "str"
+            },
+            {
+                "label": "28",
+                "value": "28",
+                "type": "str"
+            },
+            {
+                "label": "29",
+                "value": "29",
+                "type": "str"
+            },
+            {
+                "label": "30",
+                "value": "30",
+                "type": "str"
+            },
+            {
+                "label": " 31",
+                "value": "31",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 660,
+        "y": 2440,
+        "wires": [
+            [
+                "fff753de54f3c5b1",
+                "6f5660b3090e8ed8",
+                "07240c250c0d9154"
+            ]
+        ]
+    },
+    {
+        "id": "fff753de54f3c5b1",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/time/fertD2",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 930,
+        "y": 2440,
+        "wires": []
+    },
+    {
+        "id": "6f5660b3090e8ed8",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 2500,
+        "wires": []
+    },
+    {
+        "id": "ed90aaea6d7dcbe8",
+        "type": "persist out",
+        "z": "ee2b64da3f103429",
+        "name": "Bulan2",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 460,
+        "y": 2260,
+        "wires": [
+            [
+                "86b440d0a305db2a"
+            ]
+        ]
+    },
+    {
+        "id": "67cb9e0e4c92c587",
+        "type": "persist in",
+        "z": "ee2b64da3f103429",
+        "name": "Bulan2",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 920,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "8577c88ca13b0bfc",
+        "type": "persist out",
+        "z": "ee2b64da3f103429",
+        "name": "Tanggal2",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 460,
+        "y": 2440,
+        "wires": [
+            [
+                "81d53570f2e8aef7"
+            ]
+        ]
+    },
+    {
+        "id": "07240c250c0d9154",
+        "type": "persist in",
+        "z": "ee2b64da3f103429",
+        "name": "Tanggal2",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 900,
+        "y": 2560,
+        "wires": []
+    },
+    {
+        "id": "1d03673719e38b49",
+        "type": "ui_dropdown",
+        "z": "ee2b64da3f103429",
+        "name": "jadwal bulan ketiga",
+        "label": "Bulan",
+        "tooltip": "Masukan Bulan",
+        "place": "Select option",
+        "group": "e2553c755b99c0ca",
+        "order": 17,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Januari",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "Februari",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "Maret",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "April",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "Mei",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "Juni",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "Juli",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "Agustus",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "September",
+                "value": "9",
+                "type": "str"
+            },
+            {
+                "label": "Oktober",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "November",
+                "value": "11",
+                "type": "str"
+            },
+            {
+                "label": "Desember",
+                "value": "12",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 970,
+        "y": 2720,
+        "wires": [
+            [
+                "7115ac2a22dad556",
+                "89e97a77272557f7",
+                "e3edcc0f8a8b1091"
+            ]
+        ]
+    },
+    {
+        "id": "7115ac2a22dad556",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/time/fertM3",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 1270,
+        "y": 2720,
+        "wires": []
+    },
+    {
+        "id": "89e97a77272557f7",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 43",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 2780,
+        "wires": []
+    },
+    {
+        "id": "40609b761e80f24d",
+        "type": "ui_dropdown",
+        "z": "ee2b64da3f103429",
+        "name": "jadwal tanggal ketiga",
+        "label": "Tanggal",
+        "tooltip": "Masukan Tanggal",
+        "place": "Select option",
+        "group": "e2553c755b99c0ca",
+        "order": 18,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "1",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "2",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "3",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "4",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "5",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "6",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "7",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "8",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "9",
+                "value": "9",
+                "type": "str"
+            },
+            {
+                "label": "10",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "11",
+                "value": "11",
+                "type": "str"
+            },
+            {
+                "label": "12",
+                "value": "12",
+                "type": "str"
+            },
+            {
+                "label": "13",
+                "value": "13",
+                "type": "str"
+            },
+            {
+                "label": "14",
+                "value": "14",
+                "type": "str"
+            },
+            {
+                "label": "15",
+                "value": "15",
+                "type": "str"
+            },
+            {
+                "label": "16",
+                "value": "16",
+                "type": "str"
+            },
+            {
+                "label": "17",
+                "value": "17",
+                "type": "str"
+            },
+            {
+                "label": "18",
+                "value": "18",
+                "type": "str"
+            },
+            {
+                "label": "19",
+                "value": "19",
+                "type": "str"
+            },
+            {
+                "label": "20",
+                "value": "20",
+                "type": "str"
+            },
+            {
+                "label": "21",
+                "value": "21",
+                "type": "str"
+            },
+            {
+                "label": "22",
+                "value": "22",
+                "type": "str"
+            },
+            {
+                "label": "23",
+                "value": "23",
+                "type": "str"
+            },
+            {
+                "label": "24",
+                "value": "24",
+                "type": "str"
+            },
+            {
+                "label": "25",
+                "value": "25",
+                "type": "str"
+            },
+            {
+                "label": "26",
+                "value": "26",
+                "type": "str"
+            },
+            {
+                "label": "27",
+                "value": "27",
+                "type": "str"
+            },
+            {
+                "label": "28",
+                "value": "28",
+                "type": "str"
+            },
+            {
+                "label": "29",
+                "value": "29",
+                "type": "str"
+            },
+            {
+                "label": "30",
+                "value": "30",
+                "type": "str"
+            },
+            {
+                "label": " 31",
+                "value": "31",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 980,
+        "y": 2900,
+        "wires": [
+            [
+                "573d07eddfdbda21",
+                "9d45ab099d05ff60",
+                "37702194bae8e9b4"
+            ]
+        ]
+    },
+    {
+        "id": "573d07eddfdbda21",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/time/fertD3",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 1250,
+        "y": 2900,
+        "wires": []
+    },
+    {
+        "id": "9d45ab099d05ff60",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 44",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 2960,
+        "wires": []
+    },
+    {
+        "id": "e4d1fb64345325b9",
+        "type": "persist out",
+        "z": "ee2b64da3f103429",
+        "name": "Bulan3",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 780,
+        "y": 2720,
+        "wires": [
+            [
+                "1d03673719e38b49"
+            ]
+        ]
+    },
+    {
+        "id": "e3edcc0f8a8b1091",
+        "type": "persist in",
+        "z": "ee2b64da3f103429",
+        "name": "Bulan3",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 1240,
+        "y": 2820,
+        "wires": []
+    },
+    {
+        "id": "9eb241fdb7eb9a4a",
+        "type": "persist out",
+        "z": "ee2b64da3f103429",
+        "name": "Tanggal3",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 780,
+        "y": 2900,
+        "wires": [
+            [
+                "40609b761e80f24d"
+            ]
+        ]
+    },
+    {
+        "id": "37702194bae8e9b4",
+        "type": "persist in",
+        "z": "ee2b64da3f103429",
+        "name": "Tanggal3",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 1220,
+        "y": 3020,
+        "wires": []
+    },
+    {
+        "id": "31e38985db5ee12e",
+        "type": "ui_dropdown",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "label": "Menit",
+        "tooltip": "Masukan Jam",
+        "place": "Select option",
+        "group": "e2553c755b99c0ca",
+        "order": 16,
+        "width": 4,
+        "height": 2,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "1",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "2",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "3",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "4",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "5",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "6",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "7",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "8",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "9",
+                "value": "9",
+                "type": "str"
+            },
+            {
+                "label": "10",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "11",
+                "value": "11",
+                "type": "str"
+            },
+            {
+                "label": "12",
+                "value": "12",
+                "type": "str"
+            },
+            {
+                "label": "13",
+                "value": "13",
+                "type": "str"
+            },
+            {
+                "label": "14",
+                "value": "14",
+                "type": "str"
+            },
+            {
+                "label": "15",
+                "value": "15",
+                "type": "str"
+            },
+            {
+                "label": "16",
+                "value": "16",
+                "type": "str"
+            },
+            {
+                "label": "17",
+                "value": "17",
+                "type": "str"
+            },
+            {
+                "label": "18",
+                "value": "18",
+                "type": "str"
+            },
+            {
+                "label": "19",
+                "value": "19",
+                "type": "str"
+            },
+            {
+                "label": "20",
+                "value": "20",
+                "type": "str"
+            },
+            {
+                "label": "21",
+                "value": "21",
+                "type": "str"
+            },
+            {
+                "label": "22",
+                "value": "22",
+                "type": "str"
+            },
+            {
+                "label": "23",
+                "value": "23",
+                "type": "str"
+            },
+            {
+                "label": "24",
+                "value": "24",
+                "type": "str"
+            },
+            {
+                "label": "25",
+                "value": "25",
+                "type": "str"
+            },
+            {
+                "label": "26",
+                "value": "26",
+                "type": "str"
+            },
+            {
+                "label": "27",
+                "value": "27",
+                "type": "str"
+            },
+            {
+                "label": "28",
+                "value": "28",
+                "type": "str"
+            },
+            {
+                "label": "29",
+                "value": "29",
+                "type": "str"
+            },
+            {
+                "label": "30",
+                "value": "30",
+                "type": "str"
+            },
+            {
+                "label": "31",
+                "value": "31",
+                "type": "str"
+            },
+            {
+                "label": "32",
+                "value": "32",
+                "type": "str"
+            },
+            {
+                "label": "33",
+                "value": "33",
+                "type": "str"
+            },
+            {
+                "label": "34",
+                "value": "34",
+                "type": "str"
+            },
+            {
+                "label": "35",
+                "value": "35",
+                "type": "str"
+            },
+            {
+                "label": "36",
+                "value": "36",
+                "type": "str"
+            },
+            {
+                "label": "37",
+                "value": "37",
+                "type": "str"
+            },
+            {
+                "label": "38",
+                "value": "38",
+                "type": "str"
+            },
+            {
+                "label": "39",
+                "value": "39",
+                "type": "str"
+            },
+            {
+                "label": "40",
+                "value": "40",
+                "type": "str"
+            },
+            {
+                "label": "41",
+                "value": "41",
+                "type": "str"
+            },
+            {
+                "label": "42",
+                "value": "42",
+                "type": "str"
+            },
+            {
+                "label": "43",
+                "value": "43",
+                "type": "str"
+            },
+            {
+                "label": "44",
+                "value": "44",
+                "type": "str"
+            },
+            {
+                "label": "45",
+                "value": "45",
+                "type": "str"
+            },
+            {
+                "label": "46",
+                "value": "46",
+                "type": "str"
+            },
+            {
+                "label": "47",
+                "value": "47",
+                "type": "str"
+            },
+            {
+                "label": "48",
+                "value": "48",
+                "type": "str"
+            },
+            {
+                "label": "49",
+                "value": "49",
+                "type": "str"
+            },
+            {
+                "label": "50",
+                "value": "50",
+                "type": "str"
+            },
+            {
+                "label": "51",
+                "value": "51",
+                "type": "str"
+            },
+            {
+                "label": "52",
+                "value": "52",
+                "type": "str"
+            },
+            {
+                "label": "53",
+                "value": "53",
+                "type": "str"
+            },
+            {
+                "label": "54",
+                "value": "54",
+                "type": "str"
+            },
+            {
+                "label": "55",
+                "value": "55",
+                "type": "str"
+            },
+            {
+                "label": "56",
+                "value": "56",
+                "type": "str"
+            },
+            {
+                "label": "57",
+                "value": "57",
+                "type": "str"
+            },
+            {
+                "label": "58",
+                "value": "58",
+                "type": "str"
+            },
+            {
+                "label": "59",
+                "value": "59",
+                "type": "str"
+            },
+            {
+                "label": "60",
+                "value": "60",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 430,
+        "y": 1580,
+        "wires": [
+            [
+                "39548acc0a4dbb6c",
+                "e5bd7a6a5998730e",
+                "911aabd36695f692"
+            ]
+        ]
+    },
+    {
+        "id": "39548acc0a4dbb6c",
+        "type": "mqtt out",
+        "z": "ee2b64da3f103429",
+        "name": "",
+        "topic": "garden/time/fertMin",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9b55febf3685104a",
+        "x": 770,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "e5bd7a6a5998730e",
+        "type": "debug",
+        "z": "ee2b64da3f103429",
+        "name": "debug 45",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "911aabd36695f692",
+        "type": "persist in",
+        "z": "ee2b64da3f103429",
+        "name": "Minute",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 730,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "6d9cf152d8f5eefd",
+        "type": "persist out",
+        "z": "ee2b64da3f103429",
+        "name": "Minute",
+        "storageNode": "b373aed8b131cd0e",
+        "x": 270,
+        "y": 1580,
+        "wires": [
+            [
+                "31e38985db5ee12e"
+            ]
         ]
     }
 ]
