@@ -1,6 +1,3 @@
-
-
-
 void multiPageLCD() {
   currentButtonLeft = debounce(lastButtonLeft, buttonLeft);
   currentButtonRight = debounce(lastButtonRight, buttonRight);
@@ -8,7 +5,7 @@ void multiPageLCD() {
   // button prev page
   if (lastButtonLeft == LOW && currentButtonLeft == HIGH && enableChange == true) {
     lcd.clear();
-    if (lcdPageCounter < 6) {  // Page counter never higher than 5(total of pages)
+    if (lcdPageCounter < 5) {  // Page counter never higher than 5(total of pages)
       lcdPageCounter++;
     } else {
 
@@ -23,7 +20,7 @@ void multiPageLCD() {
     if (lcdPageCounter > 1) {
       lcdPageCounter--;
     } else {
-      lcdPageCounter = 6;
+      lcdPageCounter = 5;
     }
   }
   lastButtonRight = currentButtonRight;
@@ -72,10 +69,7 @@ void multiPageLCD() {
         lcd.setCursor(2, 3);
         lcd.print(soilMoistPercen);
         lcd.print("%");
-        lcd.setCursor(11, 3);
-        lcd.write(6);  // valve
-        lcd.setCursor(13, 3);
-        lcd.print(selenoidStatus);
+        
       }
       break;
 
@@ -130,28 +124,8 @@ void multiPageLCD() {
       }
       break;
 
+
     case 4:
-      {
-        lcd.setCursor(0, 0);
-        lcd.print("STATUS");
-        lcd.setCursor(1, 1);
-        lcd.print("Pompa air:");
-        lcd.setCursor(14, 1);
-        lcd.print("Mati");
-
-        lcd.setCursor(1, 2);
-        lcd.print("Selenoid:");
-        lcd.setCursor(14, 2);
-        lcd.print(selenoidStatus);
-
-        lcd.setCursor(1, 3);
-        lcd.print("Pupuk cair:");
-        lcd.setCursor(14, 3);
-        lcd.print("Mati");
-      }
-      break;
-
-    case 5:
       {
         lcd.setCursor(0, 0);
         lcd.print("JADWAL PUPUK");
@@ -180,14 +154,6 @@ void multiPageLCD() {
         lcd.setCursor(3, 2);
         if (jadwalBulan2 < 10) lcd.print("0");
         lcd.print(jadwalBulan2);
-        lcd.setCursor(7, 2);
-        lcd.print(setJam);
-        lcd.setCursor(9, 2);
-        lcd.print(":");
-        lcd.setCursor(10, 2);
-        lcd.print(setMenit);
-        lcd.setCursor(13, 2);
-        lcd.print("WIB");
 
         lcd.setCursor(0, 3);
         if (jadwalTanggal3 < 10) lcd.print("0");
@@ -197,18 +163,10 @@ void multiPageLCD() {
         lcd.setCursor(3, 3);
         if (jadwalBulan3 < 10) lcd.print("0");
         lcd.print(jadwalBulan3);
-        lcd.setCursor(7, 3);
-        lcd.print(setJam);
-        lcd.setCursor(9, 3);
-        lcd.print(":");
-        lcd.setCursor(10, 3);
-        lcd.print(setMenit);
-        lcd.setCursor(13, 3);
-        lcd.print("WIB");
       }
       break;
 
-    case 6:
+    case 5:
       {
         lcd.setCursor(0, 0);
         lcd.print("Wi-Fi connected to:");
