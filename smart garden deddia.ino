@@ -230,8 +230,6 @@ unsigned long previousMillisFert = 0;
 unsigned long previousMillisCheckFert = 0;
 unsigned long previousPing0 = 0;
 unsigned long previousPing1 = 0;
-bool isFertPumpOn = false;
-unsigned long fertOnTiming;
 
 const int LCD_COLS = 20;
 const int LCD_ROWS = 4;
@@ -279,7 +277,6 @@ byte dateClock[] = {B00000, B01110, B10101, B10101, B10111, B10001, B01110, B000
 byte pupuk[] = {B01100, B01100, B01000, B00000, B10001, B11111, B11111, B11111};
 byte air[] = {B00100, B01110, B01010, B00000, B10001, B11111, B11111, B11111};
 byte kelembapan[] = {B00000, B00100, B01110, B11111, B11111, B11111, B01110, B00000};
-byte valve1[] = {B00000, B11111, B00100, B10101, B11111, B11111, B11111, B10001};
 
 // 0 minggu, 1 senin, 2 selasa, 3 rabu, 4 kamis, 5 jumat, 6 sabtu
 char daysOfTheWeek[7][12] = {"Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"};
@@ -368,7 +365,6 @@ void setup()
   lcd.createChar(3, pupuk);
   lcd.createChar(4, air);
   lcd.createChar(5, kelembapan);
-  lcd.createChar(6, valve1);
   lcd.home();
 
   // MQTT calback function
@@ -532,17 +528,6 @@ else if (bulan == jadwalBulan3 && tanggal == jadwalTanggal3 && jam == setJam && 
       //selenoidStatus = "OFF";
   }
 
-  // override fertilizer Pump
-  //if (fertilizerPumpOn == true || overrideCh3 == true)
- // {
-  //  digitalWrite(fertilizerPump, LOW);
-
- // }
- // else
- // {
-  //  digitalWrite(fertilizerPump, HIGH);
- // }
-
   // Soil moisture trigger water pump
   if (soilMoistPercen <= soilMoistSetpoint)
   {
@@ -571,20 +556,5 @@ else if (bulan == jadwalBulan3 && tanggal == jadwalTanggal3 && jam == setJam && 
   jadwalTanggal2 = preferences.getInt("saveDay2", 0);
   jadwalTanggal3 = preferences.getInt("saveDay3", 0);
 
-
-
-  /*
-  // Serial console preferences
-  Serial.printf("latest soil tres value saved: %d \n", soilMoistSetpoint);
-  Serial.printf("latest set hari value saved: %d \n", setHari);
-  Serial.printf("latest set jam value saved: %d \n", setJam);
-  Serial.printf("latest set menit value saved: %d \n", setMenit);
-  Serial.printf("latest interval fertilizer value saved: %d \n", intervalFertilizer);
-  */
-
-
 loopWifiManager();
-
 }
-
-  
