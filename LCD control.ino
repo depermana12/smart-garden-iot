@@ -24,12 +24,6 @@ void multiPageLCD() {
     }
   }
   lastButtonRight = currentButtonRight;
-  /*
-  if (digitalRead(buttonLeft) == HIGH && digitalRead(buttonRight) == HIGH && enableChange == true){
-    lcd.clear();
-    lcdPageCounter = 6;
-  }
-  */
 
   switch (lcdPageCounter) {
     case 1:
@@ -56,12 +50,12 @@ void multiPageLCD() {
         lcd.setCursor(0, 2);
         lcd.write(3);  // pupuk
         lcd.setCursor(2, 2);
-        lcd.print(waterVolume);
+        lcd.print(fertilizerVolume);
         lcd.print("L");
         lcd.setCursor(11, 2);
         lcd.write(4);  // air
         lcd.setCursor(13, 2);
-        lcd.print(fertilizerVolume);
+        lcd.print(waterVolume);
         lcd.print("L");
         // baris 4
         lcd.setCursor(0, 3);
@@ -69,6 +63,10 @@ void multiPageLCD() {
         lcd.setCursor(2, 3);
         lcd.print(soilMoistPercen);
         lcd.print("%");
+
+        lcd.setCursor(13, 3);
+        lcd.print(intervalWatering/1000);
+        lcd.print("s");
         
       }
       break;

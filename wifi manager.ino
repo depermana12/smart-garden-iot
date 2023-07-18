@@ -501,7 +501,3 @@ void loopWifiManager()
 
   check_status();
 }
-
-
-  
-

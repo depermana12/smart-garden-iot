@@ -1,21 +1,16 @@
-
-
 void checkTime()
 {
   char bufdate[] = "DD/MM/YY";
-char buftime [] = "hh:mm:ss";
+  char buftime [] = "hh:mm:ss";
   DateTime now = rtc.now();
   hari = daysOfTheWeek[now.dayOfTheWeek()];
-  tanggal = now.day(), DEC;
-  bulan = now.month(), DEC;
-  tahun = now.year(), DEC;
-  jam = now.hour(), DEC;
-  menit = now.minute(), DEC;
-  detik = now.second(), DEC;
+  tanggal = now.day();
+  bulan = now.month();
+  tahun = now.year();
+  jam = now.hour();
+  menit = now.minute();
+  detik = now.second();
   suhu = rtc.getTemperature();
-
-  
-myDate = now.toString(bufdate);
-myTime = now.toString(buftime);
-
+  myDate = now.toString(bufdate);
+  myTime = now.toString(buftime);
 }
