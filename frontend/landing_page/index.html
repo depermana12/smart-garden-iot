@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Smart garden penyiram dan pemupukan otomatis tanaman sayur selada berbasis IoT menggunakan mikrokontroler ESP32 protokol MQTT dan Node-RED">
+    <meta name="author" content="Deddia Permana">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <title>Smart Garden | Deddia Permanaa</title>
+<!--
+
+
+inspired from templatemo.com/tm-537-art-factory
+just bootstrap framwork, nothing fancy here
+by Deddia Permana
+
+-->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/owl-carousel.css">
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">Smart Garden</a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#welcome" class="active">Home</a></li>
+                            <li><a href="https://iot.depermana.com/nodered/dashboard/">Dashboard</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <h1>Kebun pintar berbasis <strong>IoT</strong></h1>
+                        <p>Bertujuan untuk merancang dan mengimplementasikan platform berbasis IoT yang fleksibel untuk pemantauan dan kendali jarak jauh tanaman sayur dari berbagai skala.</p>
+                        <a href="#about"></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <img src="assets/images/slider-icon.png" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="assets/images/left-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
+                    <div class="left-heading">
+                        <h2>Pemantauan dan kendali</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>Aplikasi teknologi untuk memperoleh data analitik dari lingkungan pertumbuhan tanaman untuk dipelajari sebagai acuan pengambilan keputusan selanjutnya. <br><br>
+                            Data yang lebih terukur, seperti keadaan tanah, kelembapan, intensitas matahari dapat dipelajari untuk mencapai hasil produksi yang optimal.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section" id="about2">
+        <div class="container">
+            <div class="row">
+                <div class="left-text col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix">
+                    <div class="left-heading">
+                        <h2>Siklus kebun pintar</h2>
+                    </div>
+                    <p>Observasi, diagnostik, pengambil keputusan dari mikrokontroler, sensor, aktuator dan aplikasi.</p>
+                    <ul>
+                        <li>
+                            <img src="assets/images/about-icon-01.png" alt="">
+                            <div class="text">
+                                <h3>Mikrokontroler dan sensor</h3>
+                                <p>Akusisi data sensor untuk melacak pertumbuhan lingkungan tanaman sayur</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="assets/images/about-icon-02.png" alt="">
+                            <div class="text">
+                                <h3>Jaringan komunikasi</h3>
+                                <p>Transmisi data sensor nirkabel berbasis internet of things</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="assets/images/about-icon-03.png" alt="">
+                            <div class="text">
+                                <h3>Aplikasi cloud</h3>
+                                <p>Menangani paket data, mengirim dan menjadwalkan data</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-image col-lg-7 col-md-12 col-sm-12 mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <img src="assets/images/right-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+
+    <!-- ***** Features Small Start ***** -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+                    <div class="item service-item">
+                        <div class="icon">
+                            <i><img src="assets/images/about-icon-01.png" alt=""></i>
+                        </div>
+                        <h4 class="service-title">Mikrokontroler ESP32</h4>
+                        <p>Prosesor dual core terintegrasi Wi-Fi dan Bluetooth LE.</p>
+                    </div>
+                    <div class="item service-item">
+                        <div class="icon">
+                            <i><img src="assets/images/service-icon-01.png" alt=""></i>
+                        </div>
+                        <h4 class="service-title">Sensors dan Aktuator</h4>
+                        <p>Soil moisture v1.2, DHT22, RTC DS3231, HC-SR04, Motor </p>
+                    </div>
+                    <div class="item service-item">
+                        <div class="icon">
+                            <i><img src="assets/images/about-icon-02.png" alt=""></i>
+                        </div>
+                        <h4 class="service-title">IoT</h4>
+                        <p>Komunikasi nirkabel antar perangkat atau cloud.</p>
+                    </div>
+                    <div class="item service-item">
+                        <div class="icon">
+                            <i><img src="assets/images/MQTT.png" alt=""></i>
+                        </div>
+                        <h4 class="service-title">MQTT</h4>
+                        <p>Protokol handal berbasis publish dan subscribe.</p>
+                    </div>
+                    <div class="item service-item">
+                        <div class="icon">
+                            <i><img src="assets/images/node-RED.png" alt=""></i>
+                        </div>
+                        <h4 class="service-title">node-RED</h4>
+                        <p>menghubungkan perangkat, API, layanan online .</p>
+                    </div>
+                    <div class="item service-item">
+                        <div class="icon">
+                            <i><img src="assets/images/service-icon-02.png" alt=""></i>
+                        </div>
+                        <h4 class="service-title">Desktop klien</h4>
+                        <p>Dashboard pemantauan kontrol berbasis browser.</p>
+                    </div>
+                    <div class="item service-item">
+                        <div class="icon">
+                            <i><img src="assets/images/mobile-klien.png" alt=""></i>
+                        </div>
+                        <h4 class="service-title">Mobile klien</h4>
+                        <p>Dashboard pemantauan kontrol berbasis Android..</p>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Small End ***** -->
+
+    <h2 class="section-title">Contributors</h2>
+    <div class="team section" id="team">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="team-member">
+                <div class="main-content">
+                  <img src="assets/images/member-01.jpg" alt="">
+                  <span class="category">Mahasiswa</span>
+                  <h4>Deddia Permana</h4>
+                  <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                </div>
+              </div> 
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="team-member">
+                <div class="main-content">
+                  <img src="assets/images/member-02.jpg" alt="">
+                  <span class="category">Dosen Pembimbing 1</span>
+                  <h4>Dr. Aris Sunawar, S.Pd, MT</h4>
+                  <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="team-member">
+                <div class="main-content">
+                  <img src="assets/images/member-02.jpg" alt="">
+                  <span class="category">Dosen Pembimbing 2</span>
+                  <h4>Massus Subekti, S.Pd, MT</h4>
+                  <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div> 
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 col-sm-12">
+                    <p class="copyright">Copyright &copy; 2023 Smart Garden | Crafted with <i class="fa fa-coffee"></i> | Deddia Permana</p>
+                </div>       
+            </div>
+        </div>
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>
