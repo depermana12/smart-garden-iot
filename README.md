@@ -1,4 +1,8 @@
 Project ini dibuat sebagai tugas akhir dengan fokus smart garden
+
+## Demo
+[Demo alat](https://www.youtube.com/watch?v=bV-0lBpWv4o)
+
 # Tujuan Penelitian
 Bertujuan untuk merancang, membuat, mengimplementasi sistem otomasi penyiraman air dan pemupukan cair di dalam mini greenhouse berbasis IoT (Internet of Things).
 
